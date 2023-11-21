@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="checkUser">
+        SELECT
+        *
+        FROM TBL_ALL_USERS
+    </entry>
+
+    <entry key="findAllUserName">
+        SELECT
+            USER_NAME
+          FROM TBL_ALL_USERS
+    </entry>
+
+    <entry key="editUser">
+        UPDATE TBL_ALL_USERS
+        SET USER_NAME = ?
+        WHERE USER_NAME = ?
+    </entry>
+
+    <entry key="insertUser">
+        INSERT INTO TBL_ALL_USERS(
+            USER_CODE,
+            USER_NAME,
+            USER_TIER
+        ) VALUES (
+            NULL,
+            ?,
+            ?
+        )
+    </entry>
+
+    <entry key="deleteUser">
+        DELETE
+          FROM TBL_ALL_USERS
+         WHERE USER_NAME = ?
+    </entry>
+</properties>
